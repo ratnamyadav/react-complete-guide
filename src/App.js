@@ -10,8 +10,9 @@ function App() {
   ])
 
   const addExpense = (expense) => {
-    console.log([...expenses, expense]);
-    updateExpenses([...expenses, expense]);
+    updateExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   }
 
   return (
