@@ -21,7 +21,7 @@ const ExpenseForm = (props) => {
     setExpense((prevExpense) => {
       return {
         ...prevExpense,
-        amount: event.target.value
+        amount: +event.target.value
       }
     });
   }
